@@ -116,6 +116,7 @@
             <button type="submit">Update</button>
         </form>
         <div class="row1">
+            {% if not datas %}
             {% for list in datas %}
                 <div class="pdiv">
                     <span>{{ list.data }}</span>
@@ -128,6 +129,9 @@
                     </div>
                 </div>
             {% endfor %}
+            {% else %}
+                <h1 style="text-align: center; margin-top: 4%; color: darkred;">List is Empty add Data !!!</h1>
+            {%endif%}
         </div>
     </div>
 </div>
